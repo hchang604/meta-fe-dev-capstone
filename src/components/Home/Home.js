@@ -12,7 +12,7 @@ const Home = () => {
                 <div>
                     <h2>Little Lemon</h2>
                     <h3>Chicago</h3>
-                    <p>We are a familt own Mediterranean<br />restaurant, focused on traditional recipes<br />served with a modern twist</p>
+                    <p>We are a family owned Mediterranean<br />restaurant, focused on traditional recipes<br />served with a modern twist</p>
 
                     <button>Reserve a Table</button>
                 </div>
@@ -28,7 +28,7 @@ const Home = () => {
                     <div id="special_cards">
                         <article>
                             <img src={greekSalad} />
-                            <div class="card-content">
+                            <div className="card-content">
                                 <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor 
@@ -38,7 +38,7 @@ const Home = () => {
                         </article>
                         <article>
                             <img src={bruchetta} />
-                            <div class="card-content">
+                            <div className="card-content">
                                 <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor 
@@ -48,7 +48,7 @@ const Home = () => {
                         </article>
                         <article >
                             <img src={lemonDessert} />
-                            <div class="card-content">
+                            <div className="card-content">
                                 <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor 
