@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { fetchAPI, submitAPI } from "../../API/api";
 import { useNavigate } from "react-router-dom";
+import RestaurantImg from '../../assets/restaurant.jpg'
 
 const BookingPage = (props) => {
     return (
-        <>
-            <h1>Book Now</h1>
+        <section id="book_now_section">
+            <img src={RestaurantImg} />
             <BookingForm availableTimes={props.availableTimes} onAvailableTimesChange={props.onAvailableTimesChange} />
-        </>
+        </section>
     )
 }
 
@@ -55,7 +56,8 @@ const BookingForm = (props) => {
 
 
     return (
-        <form style={{display: 'grid', maxWidth: '200px', gap: '20px'}} onSubmit={handleSubmit}>
+        <form id="form" style={{display: 'grid', maxWidth: '500px', gap: '20px', maxHeight: '1000px'}} onSubmit={handleSubmit}>
+            <h2>Book Now</h2>
             <label for="res-date">Choose date</label>
             <input aria-label="choose date" type="date" id="res-date" name="res-date" value={date} onChange={(e) => {
                 setDate(e.target.value)
@@ -83,7 +85,7 @@ const BookingForm = (props) => {
                 <option>Birthday</option>
                 <option>Anniversary</option>
             </select>
-            <input disabled={date === 'yyyy-mm-dd'} type="submit" value="Make Your reservation" />
+            <button disabled={date === 'yyyy-mm-dd'} type="submit">Make Your reservation</button>
         </form>
     )
 }
