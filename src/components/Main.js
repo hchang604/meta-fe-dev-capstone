@@ -2,6 +2,7 @@ import React, {useEffect, useReducer} from 'react'
 import { Routes, Route } from 'react-router-dom';
 import Home from './Home/Home';
 import BookingPage from './Reservations/BookingPage';
+import ConfirmBooking from './Reservations/ConfirmBooking';
 
 export const updateTimes = (state, action) => {
 
@@ -30,6 +31,7 @@ const Main = () => {
         {/* <Route path="/about" element={<About />} />
         <Route path="/menu" element={<Menu />} /> */}
         <Route path="/reservations" element={<BookingPage availableTimes={state.availableTimes} onAvailableTimesChange={handleChangeAvailableTimes} />} />
+        <Route path="/reservation_confirmed" element={<ConfirmBooking />} />
         {/* <Route path="/orderonline" element={<OrderOnline />} />
         <Route path="/login" element={<Login />} /> */}
       </Routes>

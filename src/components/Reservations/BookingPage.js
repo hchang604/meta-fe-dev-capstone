@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { fetchAPI, submitAPI } from "../../API/api";
+import { useNavigate } from "react-router-dom";
 
 const BookingPage = (props) => {
-    const [formSubmitted, setFormSubmitted] = useState(false)
-
     const handleSubmit = () => {
         setFormSubmitted(true)
     }
@@ -12,7 +11,6 @@ const BookingPage = (props) => {
         <>
             <h1>Book Now</h1>
             <BookingForm availableTimes={props.availableTimes} onAvailableTimesChange={props.onAvailableTimesChange} onSubmit={handleSubmit} />
-            {formSubmitted && <h2>Reservation confirmed</h2>}
         </>
     )
 }
@@ -24,6 +22,8 @@ const BookingForm = (props) => {
     const [guestCount, setGuestCount] = useState(1)
     const [occasion, setOccasion] = useState('Birthday')
 
+    const navigate = useNavigate()
+
     const handleSubmit = (e) => {
         e.preventDefault()
         props.onSubmit()
@@ -32,6 +32,8 @@ const BookingForm = (props) => {
             setDate('yyyy-mm-dd')
             setGuestCount(1)
             setOccasion('Birthday')
+
+            navigate('/reservation_confirmed')
         }
     }
     
